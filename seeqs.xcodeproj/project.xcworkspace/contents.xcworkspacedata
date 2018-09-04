@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/tgallant/src/seeqs/seeqs/RtMidi.cpp">
+   </FileRef>
+   <FileRef
+      location = "group:../seeqs/RtMidi.h">
+   </FileRef>
+   <FileRef
       location = "self:seeqs.xcodeproj">
    </FileRef>
 </Workspace>

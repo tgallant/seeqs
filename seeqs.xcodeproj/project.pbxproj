@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3DF5DCD1213DF91C006ACC71 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5DCD0213DF91C006ACC71 /* main.cpp */; };
+		3DF5DCD9213DFC37006ACC71 /* RtMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5DCD8213DFC36006ACC71 /* RtMidi.cpp */; };
+		3DF5DCDC213E2599006ACC71 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF5DCDB213E2599006ACC71 /* CoreMIDI.framework */; };
+		3DF5DCDE213E25A5006ACC71 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF5DCDD213E25A5006ACC71 /* CoreAudio.framework */; };
+		3DF5DCE0213E25AF006ACC71 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF5DCDF213E25AF006ACC71 /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,11 @@
 /* Begin PBXFileReference section */
 		3DF5DCCD213DF91C006ACC71 /* seeqs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = seeqs; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF5DCD0213DF91C006ACC71 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3DF5DCD7213DFC2C006ACC71 /* RtMidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtMidi.h; sourceTree = "<group>"; };
+		3DF5DCD8213DFC36006ACC71 /* RtMidi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RtMidi.cpp; path = /Users/tgallant/src/seeqs/seeqs/RtMidi.cpp; sourceTree = "<absolute>"; };
+		3DF5DCDB213E2599006ACC71 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		3DF5DCDD213E25A5006ACC71 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		3DF5DCDF213E25AF006ACC71 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF5DCE0213E25AF006ACC71 /* CoreFoundation.framework in Frameworks */,
+				3DF5DCDE213E25A5006ACC71 /* CoreAudio.framework in Frameworks */,
+				3DF5DCDC213E2599006ACC71 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +55,7 @@
 			children = (
 				3DF5DCCF213DF91C006ACC71 /* seeqs */,
 				3DF5DCCE213DF91C006ACC71 /* Products */,
+				3DF5DCDA213E2599006ACC71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +70,21 @@
 		3DF5DCCF213DF91C006ACC71 /* seeqs */ = {
 			isa = PBXGroup;
 			children = (
+				3DF5DCD8213DFC36006ACC71 /* RtMidi.cpp */,
 				3DF5DCD0213DF91C006ACC71 /* main.cpp */,
+				3DF5DCD7213DFC2C006ACC71 /* RtMidi.h */,
 			);
 			path = seeqs;
+			sourceTree = "<group>";
+		};
+		3DF5DCDA213E2599006ACC71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DF5DCDF213E25AF006ACC71 /* CoreFoundation.framework */,
+				3DF5DCDD213E25A5006ACC71 /* CoreAudio.framework */,
+				3DF5DCDB213E2599006ACC71 /* CoreMIDI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF5DCD9213DFC37006ACC71 /* RtMidi.cpp in Sources */,
 				3DF5DCD1213DF91C006ACC71 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +264,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					__MACOSX_CORE__,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
