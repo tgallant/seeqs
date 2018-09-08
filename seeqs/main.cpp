@@ -127,18 +127,18 @@ int main() {
     
     Seeqs seeqs (midiin, midiout);
     
-    seeqs.newNote(64, 90);
-    seeqs.newNote(69, 90);
-    seeqs.newNote(74, 90);
+    seeqs.newNote(64, 70);
     seeqs.newNote(59, 90);
-    seeqs.newNote(64, 90);
+    seeqs.newNote(69, 100);
+    seeqs.newNote(80, 90);
+    seeqs.newNote(63, 80);
+    seeqs.newNote(72, 90);
     
-    seeqs.newStep(2);
     seeqs.newStep(3);
     seeqs.newStep(3);
     seeqs.newStep(2);
     seeqs.newStep(2);
-    seeqs.newStep(3);
+    seeqs.newStep(2);
     
     // Set our callback function.  This should be done immediately after
     // opening the port to avoid having incoming messages written to the
